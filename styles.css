@@ -1,0 +1,204 @@
+/* Fonts & Colors */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fef6ff;
+  color: #4a148c;
+}
+
+/* Navigation */
+header {
+  background: #7b1fa2;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #ffd6ff;
+}
+
+/* Hero */
+#hero {
+  background: linear-gradient(to right, #9c27b0, #ce93d8);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+}
+
+.hero-content span {
+  color: #ffd6ff;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: #7b1fa2;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ffd6ff;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.section.alt {
+  background: #f3e5f5;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Education */
+.edu-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.edu-pic {
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: #fce4ec;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #7b1fa2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .edu-container {
+    flex-direction: column;
+  }
+}
+/* Dark Mode */
+.dark-mode {
+  background: #2c2c2c;
+  color: #fff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #4a148c;
+}
+
+.dark-mode .card {
+  background: #444;
+  color: #fff;
+}
+
+/* Project Card Active */
+.project.active {
+  transform: scale(1.05);
+  background: #e1bee7;
+}
+
+/* Floating Emoji Animation */
+.floating-emoji {
+  position: fixed;
+  top: -2rem;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: floatDown linear forwards;
+  z-index: 9999;
+}
+
+@keyframes floatDown {
+  from {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
