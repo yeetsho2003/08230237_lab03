@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yeetsho Choden | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation (fixed: id + nav-links + hamburger) -->
+  <header id="navbar">
+    <nav class="container-nav">
+      <h1>Yeetsho Choden</h1>
+
+      <!-- hamburger for mobile -->
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- nav-links used by script -->
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section hero-section">
+    <div class="hero-content">
+      <img src="profile.jpg" alt="Yeetsho Choden" class="hero-pic" />
+      <h2 id="greeting">Hello, I’m <span>Yeetsho</span> 🌸</h2>
+      <p>A B.Ed ICT student passionate about tech in education ✨</p>
+      <a href="#about" class="btn">Explore My World</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>🌷 About Me</h2>
+    <p>
+      Hi! I’m <strong>Yeetsho Choden</strong>, a third-year B.Ed ICT student at
+      <strong>Samtse College of Education</strong>. I love combining
+      <em>creativity and technology</em> to make learning fun and interactive.
+      My dream is to inspire students with innovative teaching tools.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section alt">
+    <h2>📚 Education</h2>
+
+    <!-- education-item used by the intersection observer -->
+    <div class="edu-container education-item">
+      <img src="college.jpg" alt="Samtse College of Education" class="edu-pic" />
+      <div class="edu-details">
+        <h3>B.Ed in ICT</h3>
+        <p><em>Samtse College of Education, Bhutan</em></p>
+        <p>Expected Graduation: 2027</p>
+        <ul>
+          <li>Educational Technology</li>
+          <li>Web Development</li>
+          <li>Programming Fundamentals</li>
+          <li>Instructional Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills (converted to list for script skill animations) -->
+  <section id="skills" class="section">
+    <h2>💻 My Skills</h2>
+
+    <!-- skills-category is used by initSkillAnimations -->
+    <ul class="skills-grid skills-category">
+      <li class="card">HTML, CSS, JavaScript</li>
+      <li class="card">Python &amp; PHP (basic)</li>
+      <li class="card">MS Office &amp; Canva</li>
+      <li class="card">Lesson Planning with ICT</li>
+      <li class="card">Interactive Content (Kahoot, Quizizz)</li>
+      <li class="card">Collaboration &amp; Creativity</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section alt">
+    <h2>🌸 Projects</h2>
+
+    <!-- project-card used by initProjectInteractions -->
+    <div class="projects-grid">
+      <div class="card project-card">
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="card project-card">
+        <h3>ICT Lesson Plan</h3>
+        <p>Designed multimedia-rich lesson plans with interactive quizzes.</p>
+      </div>
+
+      <div class="card project-card">
+        <h3>Student Information System</h3>
+        <p>Mini project with PHP &amp; MySQL for student records management.</p>
+      </div>
+
+      <div class="card project-card">
+        <h3>Educational Video</h3>
+        <p>Produced a video explaining ICT concepts for Grade 9 learners.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact: replaced static content with a form so your JS validation works -->
+  <section id="contact" class="section">
+    <h2>📩 Contact Me</h2>
+
+    <!-- contactForm required by script.js -->
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name" class="sr-only">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="sr-only">Email</label>
+        <input id="email" name="email" type="email" placeholder="your@email.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message" class="sr-only">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- Keep contact details below the form (optional) -->
+    <div class="contact-details">
+      <p>Email: <a href="mailto:yeetshochoden@gmail.com">yeetshochoden@gmail.com</a></p>
+      <p>Phone: +975-17950619</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yeetshochoden" target="_blank" rel="noopener">linkedin.com/in/yeetshochoden</a></p>
+      <p>GitHub: <a href="https://github.com/yeetshochoden" target="_blank" rel="noopener">github.com/yeetshochoden</a></p>
+      <p>Location: Samtse, Bhutan</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with 💜 by Yeetsho Choden | 2025</p>
+  </footer>
+
+  <!-- Your JS: make sure script.js exists and contains the functions you shared -->
+  <script src="script.js"></script>
+</body>
+</html>
